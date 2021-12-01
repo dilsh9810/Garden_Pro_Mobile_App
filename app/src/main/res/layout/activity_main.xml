@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Plant_Suggestion" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="285dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:text="Temperature"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="35dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:text="Sunlight level"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="match_parent"
+        android:layout_height="35dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Soil Moisture Value"
+        android:textSize="20sp"
+         />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="PH Value"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:text="Soil Type"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="match_parent"
+        android:layout_height="35dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_light"
+        android:shadowColor="@android:color/holo_green_light"
+        android:text="Predict Plant"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
