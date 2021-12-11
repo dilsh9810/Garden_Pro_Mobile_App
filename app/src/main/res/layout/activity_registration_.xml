@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/images"
     tools:context=".Registration_Activity" >
 
     <TextView
@@ -15,32 +16,36 @@
         android:layout_marginStart="52dp"
         android:layout_marginTop="214dp"
         android:layout_marginEnd="72dp"
-        android:layout_marginBottom="482dp"
-        android:text="Registration"
+        android:text="@string/Reg"
         android:textAlignment="center"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.352"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="439dp"
         android:layout_height="556dp"
         android:layout_marginStart="9dp"
         android:layout_marginTop="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.621"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7">
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.0">
+
 
         <EditText
-            android:id="@+id/editTextTextPersonName7"
-            android:layout_width="416dp"
-            android:layout_height="47dp"
+            android:id="@+id/txtusername"
+            android:layout_width="327dp"
+            android:layout_height="54dp"
             android:layout_marginBottom="477dp"
             android:background="@drawable/fullname_textbox"
             android:ems="10"
@@ -48,99 +53,72 @@
             android:inputType="textPersonName"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.484" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress5"
-            android:layout_width="416dp"
-            android:layout_height="45dp"
+            android:id="@+id/txtuseremail"
+            android:layout_width="331dp"
+            android:layout_height="50dp"
             android:layout_marginTop="23dp"
             android:layout_marginBottom="21dp"
             android:background="@drawable/email_textbox"
             android:ems="10"
             android:hint="Email"
             android:inputType="textEmailAddress"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+            app:layout_constraintBottom_toTopOf="@+id/txtuserpassword"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.478"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toBottomOf="@+id/txtusername"
+            app:layout_constraintVertical_bias="0.45" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
-            android:layout_width="401dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="21dp"
+            android:id="@+id/txtuserpassword"
+            android:layout_width="329dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="24dp"
             android:background="@drawable/password_textbox"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress5" />
+            app:layout_constraintTop_toBottomOf="@+id/txtuseremail" />
 
         <EditText
-            android:id="@+id/editTextTextPassword2"
-            android:layout_width="403dp"
-            android:layout_height="47dp"
+            android:id="@+id/txtconfirmpassword"
+            android:layout_width="328dp"
+            android:layout_height="52dp"
             android:layout_marginTop="26dp"
-            android:layout_marginBottom="17dp"
             android:background="@drawable/confirm_password"
             android:ems="10"
             android:hint="Confirm Password"
             android:inputType="textPassword"
-            app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.555"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
-
-        <EditText
-            android:id="@+id/editTextPhone"
-            android:layout_width="410dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="17dp"
-            android:layout_marginEnd="14dp"
-            android:background="@drawable/telephone"
-            android:ems="10"
-            android:hint="Telephone No "
-            android:inputType="phone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+            app:layout_constraintTop_toBottomOf="@+id/txtuserpassword" />
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="385dp"
-            android:layout_height="43dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginBottom="40dp"
+            android:id="@+id/btnreg"
+            android:layout_width="310dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="156dp"
             android:background="@drawable/register_button"
+            android:clickable="true"
             android:text="Register"
-            app:layout_constraintBottom_toTopOf="@+id/textView8"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.663"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+            app:layout_constraintTop_toBottomOf="@+id/txtconfirmpassword"
+            app:layout_constraintVertical_bias="0.545" />
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="8dp"
-            android:text="Already have an account"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

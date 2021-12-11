@@ -2,13 +2,68 @@ package com.example.plant_suggestion_system;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class Login_Activity extends AppCompatActivity {
 
-    @Override
+    //Variable Decleration
+
+    TextView signuptext;
+    EditText username, password;
+    Button Login;
+
+
+     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_);
+
+         username = findViewById(R.id.usernameedittxt);
+         password = findViewById(R.id.passwordedittxt);
+         Login = findViewById(R.id.btnlogin);
+
+     }
+
+
+
+
+    //Click Function Implementation
+    public void SignUp(View view)
+    {
+        Intent i = new Intent(Login_Activity.this,Registration_Activity.class);
+        startActivity(i);
+
     }
+
+    public void Login(View view){
+
+         if(username.getText().length() == 0 && password.getText().length() == 0)
+         {
+             username.setError("Please enter username");
+             password.setError("Please enter password");
+
+         }
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
 }
