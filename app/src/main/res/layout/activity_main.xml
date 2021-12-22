@@ -9,76 +9,87 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="285dp"/>
+        android:layout_height="285dp">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="37dp"
-        android:text="Temperature"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="match_parent"
-        android:layout_height="35dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="34dp"
-        android:text="Sunlight level"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <Spinner
-        android:id="@+id/spinner3"
-        android:layout_width="match_parent"
-        android:layout_height="35dp" />
+    </FrameLayout>
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Soil Moisture Value"
-        android:textSize="20sp"
-         />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName1"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="PH Value"
-        android:textSize="20sp"
-        />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="34dp"
-        android:text="Soil Type"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <Spinner
-        android:id="@+id/spinner4"
-        android:layout_width="match_parent"
-        android:layout_height="35dp" />
-
-    <Button
-        android:id="@+id/button"
+        android:id="@+id/tempedittxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_orange_light"
-        android:shadowColor="@android:color/holo_green_light"
-        android:text="Predict Plant"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:background="@drawable/temperature"
+        android:hint="Temperature"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/sunedittxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sunlight"
+        android:hint="Sunlight"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/edittxtsoil"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@drawable/soil_moisture"
+        android:ems="10"
+        android:hint="Soil Moisture"
+        android:inputType="textPersonName"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edittxtph"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@drawable/ph_level"
+        android:ems="10"
+        android:hint="PH Value"
+        android:inputType="textPersonName"
+        android:textSize="20sp" />
+
+
+    <Spinner
+        android:id="@+id/soilspin"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/soil_type"
+        android:text="Soil Type"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <Spinner
+        android:id="@+id/gardenmethodspin"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/gardening_method"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="293dp">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="327dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="71dp"
+            android:layout_marginBottom="215dp"
+            android:background="@drawable/predict_button"
+            android:text="Suggest Plant"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.951" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </LinearLayout>

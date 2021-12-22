@@ -37,7 +37,6 @@ public class Registration_Activity extends AppCompatActivity {
         email = findViewById(R.id.txtuseremail);
         password = findViewById(R.id.txtuserpassword);
         passwordn = findViewById(R.id.txtconfirmpassword);
-        //Phone = findViewById(R.id.phoneno);
         register = findViewById(R.id.btnreg);
 
         register.setOnClickListener(new View.OnClickListener() {
@@ -66,14 +65,10 @@ public class Registration_Activity extends AppCompatActivity {
                     registerUser(registerRequest);
 
 
-
-
                 }
-
 
             }
         });
-
 
     }
 

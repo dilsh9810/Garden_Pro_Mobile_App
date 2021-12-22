@@ -29,6 +29,17 @@ public class Login_Activity extends AppCompatActivity {
          username = findViewById(R.id.usernameedittxt);
          password = findViewById(R.id.passwordedittxt);
          Login = findViewById(R.id.btnlogin);
+         signuptext = findViewById(R.id.txtsignup);
+
+         signuptext.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+
+                 Intent i1 = new Intent(Login_Activity.this,Registration_Activity.class);
+                 startActivity(i1);
+             }
+         });
+
 
      }
 
@@ -36,12 +47,6 @@ public class Login_Activity extends AppCompatActivity {
 
 
     //Click Function Implementation
-    public void SignUp(View view)
-    {
-        Intent i = new Intent(Login_Activity.this,Registration_Activity.class);
-        startActivity(i);
-
-    }
 
     public void Login(View view){
 
@@ -49,6 +54,13 @@ public class Login_Activity extends AppCompatActivity {
          {
              username.setError("Please enter username");
              password.setError("Please enter password");
+
+         }
+         else
+         {
+                Intent i = new Intent(Login_Activity.this,System_Dashboard.class);
+                startActivity(i);
+
 
          }
 
