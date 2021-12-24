@@ -56,15 +56,10 @@ public class Registration_Activity extends AppCompatActivity {
                 }
                 else
                 {
-                    RegisterRequest registerRequest = new RegisterRequest();
+                    Toast.makeText(getApplicationContext(),"Successfully register the user",Toast.LENGTH_SHORT).show();
 
-                    registerRequest.setUsername(username.getText().toString());
-                    registerRequest.setEmail(email.getText().toString());
-                    registerRequest.setPassword(password.getText().toString());
-
-                    registerUser(registerRequest);
-
-
+                    Intent i = new Intent(Registration_Activity.this,Login_Activity.class);
+                    startActivity(i);
                 }
 
             }
@@ -72,47 +67,10 @@ public class Registration_Activity extends AppCompatActivity {
 
     }
 
-    public void registerUser(RegisterRequest registerRequest)
-    {
-
-            Call<RegisterResponse> registerResponseCall = ApiClient.getService().registerUser(registerRequest);
-            registerResponseCall.enqueue(new Callback<RegisterResponse>() {
-
-                @Override
-                public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
-
-                    if(response.isSuccessful()){
-
-                        Toast.makeText(Registration_Activity.this,"Registration Successful",Toast.LENGTH_SHORT).show();
-
-                        Intent i = new Intent(Registration_Activity.this,Login_Activity.class);
-                        startActivity(i);
-
-                        finish();
-
-                    }
-
-                    else
-                    {
-                        Toast.makeText(Registration_Activity.this,"An error occured please try again",Toast.LENGTH_SHORT).show();
-
-                    }
-
-
-                }
-
-                @Override
-                public void onFailure(Call<RegisterResponse> call, Throwable t) {
-
-                    String message = t.getLocalizedMessage();
-                    Toast.makeText(Registration_Activity.this, message, Toast.LENGTH_SHORT).show();
-
-                }
-            });
 
 
 
         }
-    }
+
 
 

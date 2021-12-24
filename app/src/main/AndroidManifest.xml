@@ -10,8 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".System_Dashboard"
+            android:name=".Crop_Instructions"
             android:exported="false" />
+
         <activity android:name=".HomePage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +22,7 @@
         </activity>
         <activity android:name=".Login_Activity" />
         <activity android:name=".Registration_Activity" />
+        <activity android:name=".System_Dashboard"/>
         <activity android:name=".Plant_Suggestion" />
     </application>
 

@@ -12,23 +12,29 @@ import android.widget.ImageView;
 
 public class System_Dashboard extends AppCompatActivity {
 
-    ImageView plantImage;
+    ImageView plant;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_system_dashboard);
 
-        plantImage = findViewById(R.id.plant_imgbtn);
+        plant = findViewById(R.id.plant_img);
 
-        plantImage.setOnClickListener(new View.OnClickListener() {
+        plant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Intent i = new Intent(System_Dashboard.this,Plant_Suggestion.class);
                 startActivity(i);
-
             }
         });
+
+
+
     }
+
+
+
+
 }

@@ -4,92 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/holo_green_light"
     android:orientation="vertical"
-    tools:context=".Plant_Suggestion" >
+    tools:context=".Plant_Suggestion">
 
-    <FrameLayout
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="285dp">
-
-    </FrameLayout>
+        android:layout_height="235dp"
+        app:srcCompat="@mipmap/plant_s" />
 
     <EditText
         android:id="@+id/tempedittxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/temperature"
-        android:hint="Temperature"
         android:ems="10"
+        android:hint="Temperature"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Spinner
+        android:id="@+id/sunspin"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
-        android:id="@+id/sunedittxt"
+        android:id="@+id/editTextTextPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/sunlight"
-        android:hint="Sunlight"
         android:ems="10"
+        android:hint="Area"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <EditText
-        android:id="@+id/edittxtsoil"
-        android:layout_width="match_parent"
-        android:layout_height="53dp"
-        android:background="@drawable/soil_moisture"
-        android:ems="10"
-        android:hint="Soil Moisture"
-        android:inputType="textPersonName"
-        android:textSize="20sp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/edittxtph"
         android:layout_width="match_parent"
         android:layout_height="51dp"
-        android:background="@drawable/ph_level"
         android:ems="10"
         android:hint="PH Value"
         android:inputType="textPersonName"
         android:textSize="20sp" />
 
+    <Spinner
+        android:id="@+id/waterdensityspin"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
 
     <Spinner
         android:id="@+id/soilspin"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="@drawable/soil_type"
+        android:layout_height="68dp"
         android:text="Soil Type"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <Spinner
         android:id="@+id/gardenmethodspin"
         android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:background="@drawable/gardening_method"
+        android:layout_height="57dp"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <Button
+        android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="293dp">
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="327dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="71dp"
-            android:layout_marginBottom="215dp"
-            android:background="@drawable/predict_button"
-            android:text="Suggest Plant"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.951" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content"
+        android:background="@drawable/predict_button"
+        android:text="Button" />
 
 
 </LinearLayout>
